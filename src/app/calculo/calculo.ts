@@ -24,23 +24,23 @@ if (this.height <= 0|| this.weight <= 0)
 
 this.bmi = this.weight / (this.height * this.height);
 
-if (this.bmi >=16){
+if (this.bmi <16){
   this.class = '＞﹏＜ Muito abaixo do peso!';
   this.img = '../assets/muitoAbaixo.jpeg';
 }
-else if (this.bmi >17 && this.bmi <18.5){
+else if (this.bmi >=16 && this.bmi <18.5){
   this.class = '＞︿＜ Abaixo do peso';
   this.img = '../assets/abaixo.jpeg';
 }
-else if (this.bmi >18.5 && this.bmi <24.9){
+else if (this.bmi >=18.5 && this.bmi <24.9){
   this.class = '\^o^/ Saudavel!';
   this.img = '../assets/normativo.jpeg';
 }
-else if (this.bmi >25 && this.bmi <29.9){
+else if (this.bmi >=25 && this.bmi <29.9){
   this.class = '╯︿╰ Acima do peso...';
   this.img = '../assets/acima.jpeg';
 }
- else if (this.bmi >30 && this.bmi < 34.9){
+ else if (this.bmi >=30 && this.bmi < 34.9){
   this.class = '≧ ﹏ ≦ Obesidade grau I';
   this.img = '../assets/obesidade1.jpeg';
 }
