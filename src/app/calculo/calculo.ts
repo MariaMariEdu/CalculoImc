@@ -10,21 +10,20 @@ export class Calculo {
   weight: number =0;
   height: number =0;
   bmi: number =0;
-img: string = '../assets/img/imcNull.png';
-  class: string = "(￣︶￣)↗ Insira os dados nos campos abaixo:"
+img: string = '../assets/img/imcNull.jpeg';
+  class: string = "(￣︶￣)↗ Insira os dados nos campos:"
 
   operationBmi(){
-if (this.height <= 0|| this.weight <= 0) 
-  {
-  this.bmi =0;
-  this.class ="insira sua altura"
-  this.img = '../assets/img/imcNull.png'
-  return;
+ if (this.height == 0)
+    {
+      this.bmi = 0;
+      this.class = 'Insira uma altura acima de 0';
+      this.img = '../assets/img/imcNull.jpeg';
 }  
 
 this.bmi = this.weight / (this.height * this.height);
 
-if (this.bmi <16){
+if (this.bmi >=16){
   this.class = '＞﹏＜ Muito abaixo do peso!';
   this.img = '../assets/img/muitoAbaixo.jpeg';
 }
@@ -40,11 +39,11 @@ else if (this.bmi >25 && this.bmi <29.9){
   this.class = '╯︿╰ Acima do peso...';
   this.img = '../assets/img/acima.jpeg';
 }
- else if (this.bmi > 30 && this.bmi < 34.9){
+ else if (this.bmi >30 && this.bmi < 34.9){
   this.class = '≧ ﹏ ≦ Obesidade grau I';
-  this.img = '../assets/img/obesidade1';
+  this.img = '../assets/img/obesidade1.jpeg';
 }
-else if (this.bmi > 35 && 40){
+else if (this.bmi >35 && 40) {
   this.class = 'ಥ_ಥ Obesidade grau II';
   this.img = '../assets/img/acima.jpeg';
 }
